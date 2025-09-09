@@ -1,0 +1,380 @@
+/* 
+        WDD 231 Course Home Page Styles
+        Student: Thomas Etiuzale
+        This CSS file contains all styles for my course home page, designed to be responsive
+        and meet all the requirements outlined in the assignment rubric.
+        */
+
+        /* CSS Variables for consistent theming */
+        :root {
+            --github-black: #0d1117;
+            --github-dark-gray: #161b22;
+            --github-light-gray: #f0f6fc;
+            --github-blue: #58a6ff;
+            --fortnite-purple: #7b61ff;
+            --fortnite-blue: #00ccff;
+            --fortnite-green: #00ff9d;
+            --completed-color: #3fb950;
+            --not-completed-color: #f85149;
+        }
+
+        /* Base styles for consistent rendering across browsers */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--github-light-gray);
+            background-color: var(--github-black);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header styling with BYU-I logo and course title */
+        header {
+            background-color: var(--github-dark-gray);
+            padding: 1.5rem;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .byui-logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--fortnite-purple), var(--fortnite-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .header-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--fortnite-blue), var(--fortnite-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Navigation menu with active state styling */
+        nav {
+            background-color: var(--github-dark-gray);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid #30363d;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--github-light-gray);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(88, 166, 255, 0.2);
+            color: var(--github-blue);
+        }
+
+        nav a.active {
+            background-color: var(--fortnite-purple);
+            color: white;
+        }
+
+        /* Main content area styling */
+        main {
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--fortnite-blue), var(--fortnite-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--github-blue);
+            border-bottom: 2px solid var(--fortnite-purple);
+            padding-bottom: 0.5rem;
+        }
+
+        section {
+            background-color: var(--github-dark-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid #30363d;
+        }
+
+        /* About section with responsive layout */
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .student-photo {
+            background: linear-gradient(135deg, var(--fortnite-purple), var(--fortnite-blue));
+            height: 250px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 1rem;
+            flex-direction: column;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        /* Course cards with filtering functionality */
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            color: var(--github-light-gray);
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--fortnite-purple);
+            color: white;
+        }
+
+        .course-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .course-card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--github-blue);
+        }
+
+        .course-card.completed {
+            border-left: 5px solid var(--completed-color);
+        }
+
+        .course-card:not(.completed) {
+            border-left: 5px solid var(--not-completed-color);
+        }
+
+        .course-code {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--github-blue);
+            margin-bottom: 0.5rem;
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        .course-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-credits {
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-status {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-completed {
+            background-color: rgba(63, 185, 80, 0.2);
+            color: var(--completed-color);
+        }
+
+        .status-not-completed {
+            background-color: rgba(248, 81, 73, 0.2);
+            color: var(--not-completed-color);
+        }
+
+        .credit-summary {
+            margin-top: 1.5rem;
+            text-align: right;
+            font-weight: 600;
+            color: var(--github-blue);
+            font-size: 1.1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #30363d;
+        }
+
+        /* Footer with social links and dynamic date */
+        footer {
+            background-color: var(--github-dark-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #30363d;
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--github-light-gray);
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--github-blue);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        #lastModified {
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+
+        /* Hamburger menu for mobile navigation */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 30px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: var(--github-light-gray);
+            border-radius: 5px;
+            transition: all 0.3s linear;
+        }
+
+        /* Responsive design for medium screens */
+        @media (min-width: 640px) {
+            .course-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .about-content {
+                flex-direction: row;
+            }
+            
+            .student-photo {
+                flex: 0 0 250px;
+            }
+        }
+
+        /* Responsive design for large screens */
+        @media (min-width: 1024px) {
+            .course-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .header-content {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Mobile navigation adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                display: none;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .logo-container {
+                justify-content: center;
+            }
+        }
