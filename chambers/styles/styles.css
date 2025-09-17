@@ -1,0 +1,504 @@
+/* Normalize.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+/* Base styles for the directory page */
+:root {
+    /* Dark theme (Fortnite-style) */
+    --github-black: #0d1117;
+    --github-dark-gray: #161b22;
+    --github-light-gray: #f0f6fc;
+    --github-blue: #58a6ff;
+    --fortnite-purple: #7b61ff;
+    --fortnite-blue: #00ccff;
+    --fortnite-green: #00ff9d;
+    --completed-color: #3fb950;
+    --not-completed-color: #f85149;
+    
+    /* Light theme (BYU-Idaho-style) */
+    --byu-blue: #002E5D;
+    --byu-white: #FFFFFF;
+    --byu-light-gray: #F2F2F2;
+    --byu-dark-gray: #333333;
+    
+    /* Current theme variables (default to dark) */
+    --bg-color: var(--github-black);
+    --card-bg: var(--github-dark-gray);
+    --text-color: var(--github-light-gray);
+    --text-muted-color: #8b949e;
+    --header-bg: linear-gradient(90deg, var(--fortnite-purple), var(--fortnite-blue));
+    --nav-bg: var(--github-dark-gray);
+    --footer-bg: var(--github-dark-gray);
+    --border-color: #30363d;
+    --accent-color: var(--fortnite-green);
+}
+
+body.light-theme {
+    --bg-color: var(--byu-white);
+    --card-bg: var(--byu-light-gray);
+    --text-color: var(--byu-dark-gray);
+    --text-muted-color: #666666;
+    --header-bg: var(--byu-blue);
+    --nav-bg: var(--byu-blue);
+    --footer-bg: var(--byu-blue);
+    --border-color: #cccccc;
+    --accent-color: var(--byu-blue);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+header {
+    background: var(--header-bg);
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--github-light-gray);
+    text-shadow: 0 0 10px rgba(252, 227, 0, 0.5);
+}
+
+.logo-text p {
+    font-size: 0.9rem;
+    color: var(--github-light-gray);
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: 2px solid var(--github-light-gray);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--github-light-gray);
+    transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.light-theme .theme-toggle {
+    border-color: var(--byu-white);
+    color: var(--byu-white);
+}
+
+body.light-theme .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--nav-bg);
+    padding: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--github-light-gray);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--fortnite-blue);
+}
+
+body.light-theme nav a {
+    color: var(--byu-white);
+}
+
+body.light-theme nav a:hover, 
+body.light-theme nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.view-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+}
+
+.view-toggle button {
+    background: var(--github-dark-gray);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--github-light-gray);
+    transition: background-color 0.3s;
+}
+
+.view-toggle button:hover, .view-toggle button.active {
+    background-color: var(--fortnite-purple);
+}
+
+body.light-theme .view-toggle button {
+    background: var(--byu-light-gray);
+    color: var(--byu-dark-gray);
+}
+
+body.light-theme .view-toggle button:hover,
+body.light-theme .view-toggle button.active {
+    background-color: var(--byu-blue);
+    color: var(--byu-white);
+}
+
+/* Directory container */
+.directory-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Member cards */
+.member-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(123, 97, 255, 0.3);
+}
+
+body.light-theme .member-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 46, 93, 0.3);
+}
+
+.member-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.member-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.member-address, .member-phone {
+    margin-bottom: 0.5rem;
+    color: var(--text-muted-color);
+}
+
+.member-website a {
+    color: var(--fortnite-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body.light-theme .member-website a {
+    color: var(--byu-blue);
+}
+
+.member-website a:hover {
+    text-decoration: underline;
+}
+
+.member-level {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.level-member {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.level-silver {
+    background-color: #C0C0C0;
+    color: black;
+}
+
+.level-gold {
+    background-color: #FFD700;
+    color: black;
+}
+
+/* List view */
+.directory-container.list {
+    grid-template-columns: 1fr;
+}
+
+.directory-container.list .member-card {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.directory-container.list .member-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0;
+}
+
+.directory-container.list .member-details {
+    grid-column: 2;
+}
+
+.directory-container.list .member-level {
+    grid-column: 3;
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--github-light-gray);
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+body.light-theme footer {
+    color: var(--byu-white);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.contact-info h3 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1rem;
+    color: var(--fortnite-green);
+}
+
+body.light-theme .contact-info h3 {
+    color: var(--byu-white);
+}
+
+.dev-info {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
+}
+
+body.light-theme .dev-info {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: var(--github-light-gray);
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        display: none;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .header-content {
+        flex-wrap: wrap;
+    }
+    
+    .header-controls {
+        gap: 0.5rem;
+    }
+    
+    .theme-toggle {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .directory-container.list .member-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .directory-container.list .member-image {
+        margin: 0 auto;
+    }
+    
+    .directory-container.list .member-level {
+        justify-self: center;
+        grid-column: 1;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .dev-info {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: none;
+        padding-left: 0;
+        padding-top: 1.5rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .directory-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .dev-info {
+        text-align: right;
+        border-top: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        padding-left: 2rem;
+        padding-top: 0;
+    }
+    
+    body.light-theme .dev-info {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+@media (min-width: 1024px) {
+    .directory-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    nav ul {
+        gap: 2.5rem;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+}

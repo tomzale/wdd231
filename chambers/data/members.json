@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Epic Gaming Lounge",
+      "address": "123 Gaming Street, Tech City",
+      "phone": "(555) 123-4567",
+      "website": "https://epicgaminglounge.com",
+      "image": "epic-gaming.jpg",
+      "membershipLevel": 3,
+      "description": "Premium gaming lounge with high-end PCs and consoles"
+    },
+    {
+      "name": "Tortoise Path",
+      "address": "456 Tournament Road, Tech City",
+      "phone": "(555) 234-5678",
+      "website": "https://tortoisepath.com/place/yetra-gaming-lounge-e-sports-stadium/",
+      "image": "neon-esports.jpg",
+      "membershipLevel": 3,
+      "description": "Professional esports venue hosting local and regional tournaments"
+    },
+    {
+      "name": "Pixel Paradise Cafe",
+      "address": "789 Retro Lane, Tech City",
+      "phone": "(555) 345-6789",
+      "website": "https://pixelparadise.cafe",
+      "image": "pixel-paradise.jpg",
+      "membershipLevel": 2,
+      "description": "Retro gaming cafe with classic consoles and themed drinks"
+    },
+    {
+      "name": "VR Dimension",
+      "address": "101 Virtual Drive, Tech City",
+      "phone": "(555) 456-7890",
+      "website": "https://vrdimension.com",
+      "image": "vr-dimension.png",
+      "membershipLevel": 2,
+      "description": "Immersive VR experiences with the latest technology"
+    },
+    {
+      "name": "Game Dev Studios",
+      "address": "202 Developer Avenue, Tech City",
+      "phone": "(555) 567-8901",
+      "website": "https://gamedevstudios.com",
+      "image": "game-dev.jpg",
+      "membershipLevel": 1,
+      "description": "Indie game development studio creating innovative experiences"
+    },
+    {
+      "name": "Controller Repair Hub",
+      "address": "303 Fix-It Road, Tech City",
+      "phone": "(555) 678-9012",
+      "website": "https://controllerrepairhub.com",
+      "image": "controller-repair.jpg",
+      "membershipLevel": 1,
+      "description": "Specialized repair service for gaming controllers and accessories"
+    },
+    {
+      "name": "Streamer's Gear",
+      "address": "404 Broadcast Boulevard, Tech City",
+      "phone": "(555) 789-0123",
+      "website": "https://streamersgear.com",
+      "image": "streamers-gear.jpg",
+      "membershipLevel": 2,
+      "description": "Premium equipment and accessories for content creators"
+    }
+  ]
+}

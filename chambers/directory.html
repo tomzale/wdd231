@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZaleWeb Chamber - Directory</title>
+    <meta name="description" content="Directory of gaming businesses in the ZaleWeb Chamber of Commerce">
+    <meta name="author" content="Thomas Etiuzale">
+    
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="ZaleWeb Chamber - Directory">
+    <meta property="og:description" content="Directory of gaming businesses in the ZaleWeb Chamber of Commerce">
+    <meta property="og:image" content="https://tomzale.github.io/wdd231/chamber/images/social-preview.jpg">
+    <meta property="og:url" content="https://tomzale.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="images/fav-icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+    <header>   
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="ZaleWeb Chamber Logo" class="logo">
+                <div class="logo-text">
+                    <h1>ZaleWeb</h1>
+                    <p>Gaming Business Chamber</p>
+                </div>
+            </div>
+            <div class="header-controls">
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/>
+                        <path d="M12 2v2c4.42 0 8 3.58 8 8s-3.58 8-8 8v2c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+                    </svg>
+                </button>
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul id="navigation">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#" class="active">Directory</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Business Directory</h2>
+        <div class="view-toggle">
+            <button id="gridView" class="active" aria-label="Grid View">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+            </button>
+            <button id="listView" aria-label="List View">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"></line>
+                    <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"></line>
+                    <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="directory-container" id="directoryContainer">
+            <!-- Member cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>ZaleWeb Chamber of Commerce</h3>
+                <p>BIU Gaming Street, Tech City</p>
+                <p>Email: info@zaleweb.com</p>
+                <p>Phone: (234) 8082-7890</p>
+            </div>
+            <div class="dev-info">
+                <p>&copy; <span id="currentYear"></span> ZaleWeb Chamber</p>
+                <p>Thomas Etiuzale</p>
+                <p>WDD 231 Project</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
