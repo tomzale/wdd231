@@ -502,3 +502,263 @@ body.light-theme .dev-info {
         display: none;
     }
 }
+
+
+
+
+
+/* Homepage Specific Styles */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    text-align: center;
+    color: var(--github-light-gray);
+    margin-bottom: 2rem;
+}
+
+body.light-theme .hero {
+    color: var(--byu-white);
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--fortnite-green);
+}
+
+body.light-theme .hero-content h2 {
+    color: var(--byu-white);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--fortnite-purple);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--fortnite-blue);
+}
+
+body.light-theme .cta-button {
+    background: var(--byu-blue);
+}
+
+body.light-theme .cta-button:hover {
+    background: #004280;
+}
+
+/* Events Section */
+.events {
+    margin-bottom: 2rem;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.event-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.event-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.event-date {
+    color: var(--fortnite-blue);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+body.light-theme .event-date {
+    color: var(--byu-blue);
+}
+
+/* Weather Section */
+.weather {
+    margin-bottom: 2rem;
+}
+
+.weather-container {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.current-weather h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.weather-data {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.weather-temp {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--fortnite-blue);
+}
+
+body.light-theme .weather-temp {
+    color: var(--byu-blue);
+}
+
+.weather-desc {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.forecast {
+    margin-top: 1.5rem;
+}
+
+.forecast h4 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.forecast-days {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.forecast-day {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+body.light-theme .forecast-day {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.weather-loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted-color);
+}
+
+/* Spotlights Section */
+.spotlights {
+    margin-bottom: 2rem;
+}
+
+.spotlights-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.spotlight-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.spotlight-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.spotlight-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/* Join CTA Section */
+.join-cta {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.join-cta h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.join-cta p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .events-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .spotlights-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .weather-data {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .events-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .spotlights-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .main-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+    
+    .events {
+        grid-column: 1;
+    }
+    
+    .weather {
+        grid-column: 2;
+    }
+    
+    .spotlights {
+        grid-column: 1 / -1;
+    }
+}
