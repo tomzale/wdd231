@@ -1,0 +1,71 @@
+/* Thank You Page Styles */
+.thankyou-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.thankyou-container h1 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.application-summary {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    text-align: left;
+}
+
+body.light-theme .application-summary {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.application-summary h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.data-row {
+    display: flex;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.data-label {
+    font-weight: bold;
+    width: 40%;
+    color: var(--accent-color);
+}
+
+.data-value {
+    width: 60%;
+}
+
+.next-steps {
+    margin: 2rem 0;
+    line-height: 1.6;
+}
+
+.next-steps a {
+    color: var(--fortnite-blue);
+    text-decoration: none;
+}
+
+body.light-theme .next-steps a {
+    color: var(--byu-blue);
+}
+
+.next-steps a:hover {
+    text-decoration: underline;
+}
+
+.thankyou-container .cta-button {
+    margin-top: 1rem;
+}
