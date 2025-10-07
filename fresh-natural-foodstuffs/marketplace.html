@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace | Fresh & Natural Foodstuffs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/marketplace.css">
+     <link rel="icon" type="image/png" href="favicon/favicon-32x32.png">
+</head>
+<body>
+    <!-- Top Disclaimer Banner -->
+    <div class="disclaimer-banner">
+        <p><i class="fas fa-exclamation-circle"></i> All prices are not fixed. Select your desired products and send a message on WhatsApp for prices to be discussed. This is a village market.</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                    <h1>Fresh & <span>Natural</span></h1>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products, brands and categories..." id="search-input">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="#" class="account-btn">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html" class="active">Marketplace</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Marketplace Content -->
+    <section class="marketplace">
+        <div class="container">
+            <div class="marketplace-header">
+                <div class="page-info">
+                    <h1>Shop Online in Nigeria</h1>
+                    <p id="products-count">1485 products found</p>
+                </div>
+                
+                <div class="sort-options">
+                    <select id="sort-select">
+                        <option value="popularity">Sort by: Popularity</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="marketplace-content">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar">
+                    <div class="filter-section">
+                        <h3>CATEGORY</h3>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-all" class="category-filter" value="all" checked>
+                                <label for="category-all">All Categories</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-fish" class="category-filter" value="fish-seafood">
+                                <label for="category-fish">Fish & Seafood</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-roots" class="category-filter" value="roots-tubers">
+                                <label for="category-roots">Roots & Tubers</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-grains" class="category-filter" value="grains-legumes">
+                                <label for="category-grains">Grains & Legumes</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-meat" class="category-filter" value="meat-poultry">
+                                <label for="category-meat">Meat & Poultry</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-oils" class="category-filter" value="oils-spices">
+                                <label for="category-oils">Oils & Spices</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="category-others" class="category-filter" value="others">
+                                <label for="category-others">Others</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>EXPRESS DELIVERY</h3>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="express-delivery">
+                                <label for="express-delivery">JUMIA 4 EXPRESS</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>PRICE (#)</h3>
+                        <div class="price-range">
+                            <div class="price-inputs">
+                                <input type="number" id="min-price" placeholder="Min" value="1200">
+                                <span>-</span>
+                                <input type="number" id="max-price" placeholder="Max" value="2922000">
+                            </div>
+                            <button class="btn btn-primary" id="apply-price">Apply</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h3>DISCOUNT PERCENTAGE</h3>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="discount-10">
+                                <label for="discount-10">10% and above</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="discount-20">
+                                <label for="discount-20">20% and above</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="discount-30">
+                                <label for="discount-30">30% and above</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="discount-40">
+                                <label for="discount-40">40% and above</label>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                
+                <!-- Products Grid -->
+                <main class="products-main">
+                    <div class="products-grid" id="marketplace-products">
+                        <!-- Products will be loaded by JavaScript -->
+                    </div>
+                    
+                    <!-- Load More Button -->
+                    <div class="load-more-container">
+                        <button class="btn btn-outline" id="load-more">Load More Products</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Fresh & Natural</h3>
+                    <p>Your trusted source for fresh and natural foodstuffs in Benin City and beyond.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="marketplace.html">Marketplace</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Size Guide</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 9, Idubor Street, Off Airport road Benin City</p>
+                    <p><i class="fas fa-phone"></i> +234 808 205 9707</p>
+                    <p><i class="fas fa-envelope"></i> sevenstars@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fresh and Natural Foodstuffs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/marketplace.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Fresh & Natural Foodstuffs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-detail.css">
+     <link rel="icon" type="image/png" href="favicon/favicon-32x32.png">
+</head>
+<body>
+    <!-- Top Disclaimer Banner -->
+    <div class="disclaimer-banner">
+        <p><i class="fas fa-exclamation-circle"></i> All prices are not fixed. Select your desired products and send a message on WhatsApp for prices to be discussed. This is a village market.</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Fresh & <span>Natural</span></h1>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products, brands and categories...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="#" class="account-btn">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <a href="marketplace.html">Marketplace</a> / <span id="product-category-breadcrumb">Category</span> / <span id="product-name-breadcrumb">Product Name</span>
+            </div>
+            
+            <div class="product-detail-content">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="" alt="Product Image">
+                    </div>
+                    <div class="image-thumbnails" id="image-thumbnails">
+                        <!-- Thumbnails will be loaded by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1 id="product-detail-name">Product Name</h1>
+                    
+                    <div class="product-rating">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-count" id="product-rating-count">(33 reviews)</span>
+                    </div>
+                    
+                    <div class="product-price-detail">
+                        <span class="current-price" id="product-detail-price">₦37,800</span>
+                        <span class="original-price" id="product-detail-original-price">₦40,000</span>
+                        <span class="discount" id="product-detail-discount">9% off</span>
+                    </div>
+                    
+                    <div class="stock-info">
+                        <span class="in-stock" id="stock-status"><i class="fas fa-check-circle"></i> In Stock</span>
+                        <span class="low-stock" id="low-stock-message">Few units left</span>
+                    </div>
+                    
+                    <div class="product-description-detail">
+                        <h3>Description</h3>
+                        <p id="product-detail-description">Product description will appear here. This is a detailed description of the product, its features, and benefits.</p>
+                    </div>
+                    
+                    <div class="delivery-options">
+                        <h3>Delivery Options</h3>
+                        <div class="delivery-option">
+                            <i class="fas fa-shipping-fast"></i>
+                            <div>
+                                <p class="delivery-title">GIG EXPRESS</p>
+                                <p class="delivery-desc">Delivery within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions-detail">
+                        <div class="quantity-selector">
+                            <label for="quantity">Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" id="decrease-qty">-</button>
+                                <input type="number" id="quantity" value="1" min="1">
+                                <button class="quantity-btn" id="increase-qty">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn btn-primary" id="add-to-cart-detail">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <a href="#" class="whatsapp-btn" id="buy-now-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Buy Now on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Similar Products -->
+            <div class="similar-products">
+                <div class="section-title">
+                    <h2>Similar Products</h2>
+                    <p>Customers who viewed this also viewed</p>
+                </div>
+                <div class="products-grid" id="similar-products">
+                    <!-- Similar products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Fresh & Natural</h3>
+                    <p>Your trusted source for fresh and natural foodstuffs in Benin City and beyond.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="marketplace.html">Marketplace</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Size Guide</a>
+                </div>
+               <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 9, Idubor Street, Off Airport road Benin City</p>
+                    <p><i class="fas fa-phone"></i> +234 808 205 9707</p>
+                    <p><i class="fas fa-envelope"></i> activevillagemarket@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fresh and Natural Foodstuffs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/product-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh & Natural Foodstuffs | Pure Taste, Pure Health</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png">
+</head>
+<body>
+    <!-- Top Disclaimer Banner -->
+    <div class="disclaimer-banner">
+        <p><i class="fas fa-exclamation-circle"></i> All prices are not fixed. Select your desired products and send a message on WhatsApp for prices to be discussed. This is a village market.</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                    <h1>Fresh & <span>Natural</span></h1>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products, brands and categories...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="#" class="account-btn">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Time-based Greeting -->
+    <section class="hero">
+        <div class="container">
+            <div class="greeting-message">
+                <h2 id="time-greeting">Good Morning!</h2>
+                <p>Welcome to Fresh & Natural Foodstuffs - Your trusted source for fresh and natural foodstuffs</p>
+            </div>
+            <div class="hero-content">
+                <h2>Pure Taste, Pure Health</h2>
+                <p>Discover the freshest and most natural foodstuffs directly from local farms to your table. Quality you can trust, taste you'll love.</p>
+                <a href="marketplace.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Shop by Category</h2>
+                <p>Browse our wide selection of fresh and natural products</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h3>Fish & Seafood</h3>
+                    <p>Fresh and dried fish, crayfish, and other seafood delicacies.</p>
+                    <a href="marketplace.html?category=fish-seafood" class="btn-link">Browse Products <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Roots & Tubers</h3>
+                    <p>Yam, coco yam, potatoes, plantain, and more.</p>
+                    <a href="marketplace.html?category=roots-tubers" class="btn-link">Browse Products <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-wheat-alt"></i>
+                    </div>
+                    <h3>Grains & Legumes</h3>
+                    <p>Beans, garri, melon (egusi), and other grains.</p>
+                    <a href="marketplace.html?category=grains-legumes" class="btn-link">Browse Products <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <h3>Meat & Poultry</h3>
+                    <p>Fresh cow meat, bush meat, live goat, and chicken.</p>
+                    <a href="marketplace.html?category=meat-poultry" class="btn-link">Browse Products <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Check out our most popular items</p>
+            </div>
+            <div class="products-grid" id="featured-products">
+                <!-- Featured products will be loaded by JavaScript -->
+            </div>
+            <div class="text-center">
+                <a href="marketplace.html" class="btn btn-secondary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Express Delivery</h3>
+                    <p>Fast delivery within Benin City and surrounding areas</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Fresh Products</h3>
+                    <p>Direct from local farms to ensure maximum freshness</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive prices with regular discounts and offers</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Customer support available via WhatsApp anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Fresh & Natural</h3>
+                    <p>Your trusted source for fresh and natural foodstuffs in Benin City and beyond.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="marketplace.html">Marketplace</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="siteplan_WitthCss.html">Site-Map</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Size Guide</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 9, Idubor Street, Off Airport road Benin City Edo State Nigeria</p>
+                    <p><i class="fas fa-phone"></i> +234 808 205 9707</p>
+                    <p><i class="fas fa-envelope"></i> activevillagemarket@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fresh and Natural Foodstuffs. All rights reserved.</p>
+            </div>
+        </div>
+
+<!-- Loom Video Embed -->
+<!-- To be removed soon Before Site goes live -->
+<div class="footer-video" style="text-align:center; margin: 20px 0;">
+    <h3>Watch My Project Demo</h3>
+    <iframe 
+        src="https://www.loom.com/embed/3f0c104144c246ae9ab53e9e3c5a39b7?sid=d1a0e57f-4b89-4d14-bfff-aef8d251a6c1"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen
+        style="width: 100%; max-width: 560px; height: 315px; border-radius: 10px;">
+    </iframe>
+</div>
+
+
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/homepage.js"></script>
+</body>
+</html>

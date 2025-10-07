@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Fresh & Natural Foodstuffs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <!-- Top Disclaimer Banner -->
+    <div class="disclaimer-banner">
+        <p><i class="fas fa-exclamation-circle"></i> All prices are not fixed. Select your desired products and send a message on WhatsApp for prices to be discussed. This is a village market.</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Fresh & <span>Natural</span></h1>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products, brands and categories...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="#" class="account-btn">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="page-header">
+                <h1>Shopping Cart</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="marketplace.html">Marketplace</a> / <span>Cart</span>
+                </div>
+            </div>
+            
+            <div class="cart-content">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <h2>Cart Items (<span id="cart-items-count">0</span>)</h2>
+                        <button class="btn btn-outline" id="clear-cart">Clear Cart</button>
+                    </div>
+                    
+                    <div class="cart-items-list" id="cart-items-list">
+                        <!-- Cart items will be loaded by JavaScript -->
+                        <div class="empty-cart" id="empty-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Your cart is empty</h3>
+                            <p>Add some products to your cart to see them here</p>
+                            <a href="marketplace.html" class="btn btn-primary">Continue Shopping</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <div class="summary-card">
+                        <h3>CART SUMMARY</h3>
+                        
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">₦0</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Delivery Fee</span>
+                            <span id="delivery-fee">₦0</span>
+                        </div>
+                        
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="cart-total">₦0</span>
+                        </div>
+                        
+                        <a href="#" class="btn btn-primary checkout-btn" id="checkout-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Checkout on WhatsApp
+                        </a>
+                        
+                        <p class="checkout-note">
+                            <i class="fas fa-info-circle"></i> You'll be redirected to WhatsApp to discuss final prices and complete your order
+                        </p>
+                    </div>
+                    
+                    <!-- Recently Viewed -->
+                    <div class="recently-viewed">
+                        <h3>Recently Viewed</h3>
+                        <div class="recent-products" id="recently-viewed">
+                            <!-- Recently viewed products will be loaded by JavaScript -->
+                        </div>
+                        <a href="marketplace.html" class="btn-link">See All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    
+                    <!-- Also Viewed -->
+                    <div class="also-viewed">
+                        <h3>Customers who viewed this also viewed</h3>
+                        <div class="also-products" id="also-viewed">
+                            <!-- Also viewed products will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Fresh & Natural</h3>
+                    <p>Your trusted source for fresh and natural foodstuffs in Benin City and beyond.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="marketplace.html">Marketplace</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Size Guide</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 9, Idubor Street, Off Airport road Benin City</p>
+                    <p><i class="fas fa-phone"></i> +234 808 205 9707</p>
+                    <p><i class="fas fa-envelope"></i> activevillagemarket@gmail.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Fresh and Natural Foodstuffs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

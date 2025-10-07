@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan - Fresh & Natural Foodstuffs</title>
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --primary-dark: #3d8b40;
+            --secondary: #FFC107;
+            --accent: #FF5722;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #fff;
+            --bg-light-secondary: #f9f9f9;
+            --border-light: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .site-plan-nav {
+            background-color: var(--bg-light-secondary);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .site-plan-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .site-plan-nav li {
+            margin: 0 1rem;
+        }
+
+        .site-plan-nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .site-plan-nav a:hover {
+            color: var(--primary-dark);
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .color-schema {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .color-box {
+            width: 150px;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .color-primary {
+            background-color: var(--primary);
+        }
+
+        .color-secondary {
+            background-color: var(--secondary);
+            color: var(--text-dark);
+        }
+
+        .color-accent {
+            background-color: var(--accent);
+        }
+
+        .typography-demo {
+            margin: 1.5rem 0;
+        }
+
+        .font-sample {
+            margin-bottom: 1.5rem;
+        }
+
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .font-roboto {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .wireframes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .wireframe {
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .wireframe img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .wireframe-caption {
+            padding: 1rem;
+            background-color: var(--bg-light-secondary);
+            text-align: center;
+            font-weight: 500;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        th {
+            background-color: var(--bg-light-secondary);
+            font-weight: 500;
+        }
+
+        .scenario-card {
+            background-color: var(--bg-light-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .scenario-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .back-to-site {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-site:hover {
+            background-color: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .site-plan-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .site-plan-nav li {
+                margin: 0.5rem 0;
+            }
+            
+            .color-schema {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Fresh & Natural Foodstuffs</h1>
+            <p>Complete Site Plan Document - Thomas Etiuzale</p>
+        </div>
+    </header>
+
+    <nav class="site-plan-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#site-name">Site Name</a></li>
+                <li><a href="#site-purpose">Site Purpose</a></li>
+                <li><a href="#scenarios">Scenarios</a></li>
+                <li><a href="#color-schema">Color Schema</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#wireframes">Wireframes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="site-name">
+            <h2>1. My Site Name</h2>
+            <p><strong>Fresh & Natural Foodstuffs</strong></p>
+            <p>The name "Fresh & Natural Foodstuffs" was chosen to clearly communicate the core values of the business:</p>
+            <ul>
+                <li><strong>Fresh:</strong> Emphasizes the quality and freshness of products</li>
+                <li><strong>Natural:</strong> Highlights the organic and unprocessed nature of offerings</li>
+                <li><strong>Foodstuffs:</strong> Clearly indicates this is a food-related business with diverse product range</li>
+            </ul>
+            <p>This name positions the business as a trusted source for quality, natural food products in the local Nigerian market, particularly appealing to health-conscious consumers and those seeking authentic local ingredients.</p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>2. Site Purpose</h2>
+            <p>The Fresh & Natural Foodstuffs website serves as a comprehensive digital marketplace and information hub with the following primary purposes:</p>
+            
+            <h3>Primary Objectives:</h3>
+            <ul>
+                <li><strong>Online Product Catalog:</strong> Showcase the complete range of fresh and natural food products available</li>
+                <li><strong>E-commerce Platform:</strong> Enable customers to browse, select, and initiate purchases through WhatsApp integration</li>
+                <li><strong>Business Information:</strong> Provide details about the company's mission, values, and commitment to quality</li>
+                <li><strong>Customer Connection:</strong> Facilitate communication between customers and the business</li>
+            </ul>
+            
+            <h3>Specific Functions:</h3>
+            <ul>
+                <li>Display products with images, descriptions, and prices</li>
+                <li>Allow product categorization and search functionality</li>
+                <li>Enable shopping cart functionality for order compilation</li>
+                <li>Provide WhatsApp integration for order confirmation and pricing discussion</li>
+                <li>Offer company information and contact details</li>
+                <li>Ensure mobile-responsive design for accessibility</li>
+            </ul>
+        </section>
+
+        <section id="scenarios">
+            <h2>3. Scenarios</h2>
+            <p>These scenarios represent typical user journeys and help define the target audience and their needs:</p>
+            
+            <div class="scenario-card">
+                <h4>Scenario 1: The Busy Working Professional</h4>
+                <p><strong>User:</strong> Chinedu, a 32-year-old accountant living in Benin City</p>
+                <p><strong>Situation:</strong> Chinedu works long hours and has limited time for grocery shopping. He wants to prepare traditional Nigerian meals but struggles to find quality ingredients during his limited free time.</p>
+                <p><strong>Goals:</strong></p>
+                <ul>
+                    <li>Find fresh, authentic Nigerian food ingredients online</li>
+                    <li>Compare prices and product quality from his office or home</li>
+                    <li>Place orders conveniently and arrange for delivery</li>
+                    <li>Get assistance with product selection and pricing</li>
+                </ul>
+                <p><strong>How the website helps:</strong> The website provides a comprehensive product catalog with clear images and descriptions, allowing Chinedu to browse during breaks. The WhatsApp integration lets him quickly discuss prices and arrange delivery without visiting physical markets.</p>
+            </div>
+            
+            <div class="scenario-card">
+                <h4>Scenario 2: The Diaspora Customer</h4>
+                <p><strong>User:</strong> Amara, a 40-year-old Nigerian living in the United Kingdom</p>
+                <p><strong>Situation:</strong> Amara wants to send authentic Nigerian food items to her elderly parents in Benin City. She's unfamiliar with current local prices and needs reassurance about product quality.</p>
+                <p><strong>Goals:</strong></p>
+                <ul>
+                    <li>Find authentic Nigerian foodstuffs for her parents</li>
+                    <li>Ensure product quality and freshness</li>
+                    <li>Arrange delivery to her parents' home</li>
+                    <li>Make payments from abroad</li>
+                </ul>
+                <p><strong>How the website helps:</strong> The website provides detailed product information and high-quality images that give Amara confidence in her selections. The WhatsApp business integration allows her to communicate directly with the seller to discuss specific needs, confirm prices, and arrange international payment and local delivery.</p>
+            </div>
+            
+            <div class="scenario-card">
+                <h4>Scenario 3: The Local Restaurant Owner</h4>
+                <p><strong>User:</strong> Chef Bola, owner of a local restaurant specializing in traditional cuisine</p>
+                <p><strong>Situation:</strong> Chef Bola needs regular, reliable supplies of fresh ingredients for her restaurant. She wants to establish a relationship with a trusted supplier who can provide consistent quality.</p>
+                <p><strong>Goals:</strong></p>
+                <ul>
+                    <li>Find a reliable supplier of fresh, natural ingredients</li>
+                    <li>Compare bulk pricing options</li>
+                    <li>Establish a ongoing business relationship</li>
+                    <li>Arrange regular deliveries</li>
+                </ul>
+                <p><strong>How the website helps:</strong> The website showcases the range of available products with clear pricing. The business contact information and WhatsApp integration allow Chef Bola to discuss bulk orders, negotiate pricing, and set up a regular supply arrangement directly with the business owners.</p>
+            </div>
+        </section>
+
+        <section id="color-schema">
+            <h2>4. Color Schema</h2>
+            <p>The color palette was carefully selected to reflect the natural, fresh theme of the business while ensuring good readability and visual appeal.</p>
+            
+            <div class="color-schema">
+                <div class="color-box color-primary">
+                    <h3>Primary Green</h3>
+                    <p>#4CAF50</p>
+                    <p><strong>Usage:</strong> Primary buttons, headers, links, and accents</p>
+                </div>
+                
+                <div class="color-box color-secondary">
+                    <h3>Accent Yellow</h3>
+                    <p>#FFC107</p>
+                    <p><strong>Usage:</strong> Secondary actions, highlights, and special notices</p>
+                </div>
+                
+                <div class="color-box color-accent">
+                    <h3>Alert Orange</h3>
+                    <p>#FF5722</p>
+                    <p><strong>Usage:</strong> Discount badges, important alerts, and call-to-action elements</p>
+                </div>
+            </div>
+            
+            <h3>Color Application:</h3>
+            <table>
+                <tr>
+                    <th>Element</th>
+                    <th>Color</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>Primary Buttons</td>
+                    <td>Primary Green (#4CAF50)</td>
+                    <td>Main call-to-action elements like "Add to Cart"</td>
+                </tr>
+                <tr>
+                    <td>Secondary Buttons</td>
+                    <td>Accent Yellow (#FFC107)</td>
+                    <td>Secondary actions and alternative buttons</td>
+                </tr>
+                <tr>
+                    <td>Discount Badges</td>
+                    <td>Alert Orange (#FF5722)</td>
+                    <td>Highlight special offers and discounts</td>
+                </tr>
+                <tr>
+                    <td>Header & Navigation</td>
+                    <td>Primary Green (#4CAF50)</td>
+                    <td>Brand identification and main navigation</td>
+                </tr>
+                <tr>
+                    <td>Text & Background</td>
+                    <td>Black/White & Grays</td>
+                    <td>Ensure readability and clean design</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="typography">
+            <h2>5. Typography</h2>
+            <p>The typography system uses Google Fonts to ensure consistency and readability across all devices.</p>
+            
+            <div class="typography-demo">
+                <div class="font-sample">
+                    <h3 class="font-poppins">Poppins - Headings</h3>
+                    <p class="font-poppins">Poppins is used for all headings and important text elements. Its modern, clean appearance conveys professionalism while maintaining approachability.</p>
+                    <p><strong>Usage:</strong> H1, H2, H3 headings, navigation items, buttons</p>
+                </div>
+                
+                <div class="font-sample">
+                    <h3 class="font-roboto">Roboto - Body Text</h3>
+                    <p class="font-roboto">Roboto is used for body text and paragraph content. Its excellent readability and neutral character make it ideal for longer text passages.</p>
+                    <p><strong>Usage:</strong> Paragraphs, product descriptions, form labels, footer text</p>
+                </div>
+            </div>
+            
+            <h3>Font Hierarchy:</h3>
+            <table>
+                <tr>
+                    <th>Element</th>
+                    <th>Font Family</th>
+                    <th>Size/Weight</th>
+                    <th>Usage Example</th>
+                </tr>
+                <tr>
+                    <td>H1 - Main Headings</td>
+                    <td>Poppins</td>
+                    <td>2.5rem, 700</td>
+                    <td>Page titles, main banners</td>
+                </tr>
+                <tr>
+                    <td>H2 - Section Headings</td>
+                    <td>Poppins</td>
+                    <td>2rem, 600</td>
+                    <td>Section titles</td>
+                </tr>
+                <tr>
+                    <td>H3 - Subheadings</td>
+                    <td>Poppins</td>
+                    <td>1.5rem, 500</td>
+                    <td>Content group headings</td>
+                </tr>
+                <tr>
+                    <td>Body Text</td>
+                    <td>Roboto</td>
+                    <td>1rem, 400</td>
+                    <td>Paragraphs, descriptions</td>
+                </tr>
+                <tr>
+                    <td>Buttons & Navigation</td>
+                    <td>Poppins</td>
+                    <td>1rem, 500</td>
+                    <td>Interactive elements</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="wireframes">
+            <h2>6. Wireframes</h2>
+            <p>Wireframes provide a structural blueprint of the website layout before visual design elements are added. Below are representations of key pages in both mobile and desktop views.</p>
+            
+            <h3>Home Page Wireframes</h3>
+            <div class="wireframes">
+                <div class="wireframe">
+                    <div style="background: #f0f0f0; height: 500px; display: flex; flex-direction: column;">
+                        <div style="background: #4CAF50; color: white; padding: 10px; text-align: center;">Header with Logo & Navigation</div>
+                        <div style="background: #e0e0e0; padding: 20px; text-align: center; flex: 1;">Hero Section with Tagline</div>
+                        <div style="background: #f5f5f5; padding: 15px; text-align: center;">Category Grid</div>
+                        <div style="background: #e8e8e8; padding: 15px; text-align: center;">Featured Products</div>
+                        <div style="background: #4CAF50; color: white; padding: 10px; text-align: center;">Footer</div>
+                    </div>
+                    <div class="wireframe-caption">Mobile Home Page Layout</div>
+                </div>
+                
+                <div class="wireframe">
+                    <div style="background: #f0f0f0; height: 400px; display: flex; flex-direction: column;">
+                        <div style="background: #4CAF50; color: white; padding: 15px; display: flex; justify-content: space-between;">
+                            <div>Logo</div>
+                            <div>Navigation Menu</div>
+                            <div>Search & Cart</div>
+                        </div>
+                        <div style="background: #e0e0e0; padding: 40px; text-align: center; flex: 1;">Hero Section</div>
+                        <div style="display: flex;">
+                            <div style="background: #f5f5f5; padding: 20px; flex: 1; text-align: center;">Categories</div>
+                            <div style="background: #e8e8e8; padding: 20px; flex: 1; text-align: center;">Featured Products</div>
+                        </div>
+                        <div style="background: #4CAF50; color: white; padding: 15px; text-align: center;">Footer</div>
+                    </div>
+                    <div class="wireframe-caption">Desktop Home Page Layout</div>
+                </div>
+            </div>
+            
+            <h3>Marketplace Page Wireframes</h3>
+            <div class="wireframes">
+                <div class="wireframe">
+                    <div style="background: #f0f0f0; height: 500px; display: flex; flex-direction: column;">
+                        <div style="background: #4CAF50; color: white; padding: 10px; text-align: center;">Header</div>
+                        <div style="display: flex;">
+                            <div style="background: #e8e8e8; padding: 10px; flex: 1;">Filters (Collapsible)</div>
+                        </div>
+                        <div style="background: #f5f5f5; padding: 15px; flex: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div style="background: white; padding: 10px; border: 1px solid #ddd;">Product Card</div>
+                            <div style="background: white; padding: 10px; border: 1px solid #ddd;">Product Card</div>
+                            <div style="background: white; padding: 10px; border: 1px solid #ddd;">Product Card</div>
+                            <div style="background: white; padding: 10px; border: 1px solid #ddd;">Product Card</div>
+                        </div>
+                        <div style="background: #4CAF50; color: white; padding: 10px; text-align: center;">Footer</div>
+                    </div>
+                    <div class="wireframe-caption">Mobile Marketplace Layout</div>
+                </div>
+                
+                <div class="wireframe">
+                    <div style="background: #f0f0f0; height: 400px; display: flex; flex-direction: column;">
+                        <div style="background: #4CAF50; color: white; padding: 15px; text-align: center;">Header</div>
+                        <div style="display: flex; flex: 1;">
+                            <div style="background: #e8e8e8; padding: 15px; width: 25%;">Filters Sidebar</div>
+                            <div style="background: #f5f5f5; padding: 15px; width: 75%; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
+                                <div style="background: white; padding: 10px; border: 1px solid #ddd;">Product Card</div>
+                                <div style="background: white; padding: 10px; border: 1px solid #ddd;">Product Card</div>
+                                <div style="background: white; padding: 10px; border: 1px solid #ddd;">Product Card</div>
+                                <div style="background: white; padding: 10px; border: 1px solid #ddd;">Product Card</div>
+                                <div style="background: white; padding: 10px; border: 1px solid #ddd;">Product Card</div>
+                                <div style="background: white; padding: 10px; border: 1px solid #ddd;">Product Card</div>
+                            </div>
+                        </div>
+                        <div style="background: #4CAF50; color: white; padding: 15px; text-align: center;">Footer</div>
+                    </div>
+                    <div class="wireframe-caption">Desktop Marketplace Layout</div>
+                </div>
+            </div>
+            
+            <h3>Product Detail Page Wireframes</h3>
+            <div class="wireframes">
+                <div class="wireframe">
+                    <div style="background: #f0f0f0; height: 600px; display: flex; flex-direction: column;">
+                        <div style="background: #4CAF50; color: white; padding: 10px; text-align: center;">Header</div>
+                        <div style="background: #e0e0e0; padding: 15px; text-align: center;">Product Image</div>
+                        <div style="background: #f5f5f5; padding: 15px; flex: 1;">
+                            <div style="margin-bottom: 10px;">Product Name</div>
+                            <div style="margin-bottom: 10px;">Price & Discount</div>
+                            <div style="margin-bottom: 10px;">Description</div>
+                            <div style="margin-bottom: 10px;">Quantity Selector</div>
+                            <div style="display: flex; gap: 10px;">
+                                <div style="background: #4CAF50; color: white; padding: 10px; flex: 1; text-align: center;">Add to Cart</div>
+                                <div style="background: #FFC107; padding: 10px; flex: 1; text-align: center;">Buy Now</div>
+                            </div>
+                        </div>
+                        <div style="background: #4CAF50; color: white; padding: 10px; text-align: center;">Footer</div>
+                    </div>
+                    <div class="wireframe-caption">Mobile Product Detail Layout</div>
+                </div>
+                
+                <div class="wireframe">
+                    <div style="background: #f0f0f0; height: 400px; display: flex; flex-direction: column;">
+                        <div style="background: #4CAF50; color: white; padding: 15px; text-align: center;">Header</div>
+                        <div style="display: flex; flex: 1;">
+                            <div style="background: #e0e0e0; padding: 20px; width: 50%; text-align: center;">Product Images</div>
+                            <div style="background: #f5f5f5; padding: 20px; width: 50%;">
+                                <div style="margin-bottom: 15px;">Product Name</div>
+                                <div style="margin-bottom: 15px;">Price & Rating</div>
+                                <div style="margin-bottom: 15px;">Description</div>
+                                <div style="margin-bottom: 15px;">Stock Info</div>
+                                <div style="margin-bottom: 15px;">Quantity Selector</div>
+                                <div style="display: flex; gap: 15px;">
+                                    <div style="background: #4CAF50; color: white; padding: 10px; flex: 1; text-align: center;">Add to Cart</div>
+                                    <div style="background: #FFC107; padding: 10px; flex: 1; text-align: center;">Buy Now</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background: #4CAF50; color: white; padding: 15px; text-align: center;">Footer</div>
+                    </div>
+                    <div class="wireframe-caption">Desktop Product Detail Layout</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Fresh & Natural Foodstuffs - &copy; Thomas Etiuzale 2025</p>
+            <p>This document outlines the planning and design considerations for the Fresh & Natural Foodstuffs website.</p>
+            <a href="index.html" class="back-to-site">Back to Main Website</a>
+        </div>
+    </footer>
+</body>
+</html>
