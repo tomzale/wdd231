@@ -1,0 +1,60 @@
+{
+  "attractions": [
+     {
+                    "id": 1,
+                    "name": "Neon Esports Arena",
+                    "address": "456 Tournament Road, Tech City",
+                    "description": "State-of-the-art esports venue hosting professional tournaments.",
+                    "image": "neon-esports.jpg"
+                },
+               {
+  "id": 2,
+  "name": "Pixel Paradise Retro Cafe",
+  "address": "9, Idubor, Benin City",
+  "description": "Classic arcade games and retro consoles with themed drinks.",
+  "image": "game-dev.jpg"
+                },
+                {
+                    "id": 3,
+                    "name": "VR Innovation Hub",
+                    "address": "11, Ajah, Lagos",
+                    "description": "Cutting-edge virtual reality experiences with latest technology.",
+                    "image": "g3.jpg"
+                },
+                {
+                    "id": 4,
+                    "name": "Gaming Tech Museum",
+                    "address": "202 History Avenue, Tech City",
+                    "description": "Interactive museum showcasing gaming technology evolution.",
+                    "image": "g4.jpg"
+                },
+                {
+                    "id": 5,
+                    "name": "Cyber Park Esports Center",
+                    "address": "303 Competition Boulevard, Tech City",
+                    "description": "Premier training facility for aspiring esports athletes.",
+                    "image": "g5.jpg"
+                },
+                {
+                    "id": 6,
+                    "name": "Streamer's Studio Complex",
+                    "address": "404 Broadcast Street, Tech City",
+                    "description": "Professional streaming studios for content creators.",
+                    "image": "g6.jpg"
+                },
+                {
+                    "id": 7,
+                    "name": "Tech Innovation Campus",
+                    "address": "505 Future Drive, Tech City",
+                    "description": "Modern campus housing gaming startups and tech companies.",
+                    "image": "hero-bg.png"
+                },
+                {
+                    "id": 8,
+                    "name": "Gamer's Gear Marketplace",
+                    "address": "606 Equipment Road, Tech City",
+                    "description": "Largest gaming equipment store in the region.",
+                    "image": "gvr.jpg"
+                }
+  ]
+}

@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZaleWeb Chamber - Directory</title>
-    <meta name="description" content="Directory of gaming businesses in the ZaleWeb Chamber of Commerce">
+    <title>ZaleWeb Chamber - Discover</title>
+    <meta name="description" content="Discover Tech City - Gaming hubs, esports venues, and tech attractions">
     <meta name="author" content="Thomas Etiuzale">
     
     <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="ZaleWeb Chamber - Directory">
-    <meta property="og:description" content="Directory of gaming businesses in the ZaleWeb Chamber of Commerce">
+    <meta property="og:title" content="ZaleWeb Chamber - Discover Tech City">
+    <meta property="og:description" content="Explore gaming hubs, esports venues, and tech attractions in our area">
     <meta property="og:image" content="https://tomzale.github.io/wdd231/chamber/images/social-preview.jpg">
-    <meta property="og:url" content="https://tomzale.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://tomzale.github.io/wdd231/chamber/discover.html">
     <meta property="og:type" content="website">
     
-    <link rel="icon" href="images/fav-icon.ico">
+    <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
 </head>
 <body>
-    <header>   
+    <header>
         <div class="header-content">
             <div class="logo-container">
                 <img src="images/logo.png" alt="ZaleWeb Chamber Logo" class="logo">
@@ -50,35 +50,45 @@
     <nav>
         <ul id="navigation">
             <li><a href="index.html">Home</a></li>
-            <li><a href="directory.html" class="active">Directory</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="events.html">Events</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
         </ul>
     </nav>
 
     <main>
-        <h2>Business Directory</h2>
-        <div class="view-toggle">
-            <button id="gridView" class="active" aria-label="Grid View">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <rect x="3" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="14" width="7" height="7"></rect>
-                    <rect x="3" y="14" width="7" height="7"></rect>
-                </svg>
-            </button>
-            <button id="listView" aria-label="List View">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"></line>
-                    <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"></line>
-                    <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"></line>
-                </svg>
-            </button>
-        </div>
-        
-        <div class="directory-container" id="directoryContainer">
-            <!-- Member cards will be dynamically inserted here -->
+        <div class="discover-container">
+            <section class="welcome-message">
+                <h2>Discover Tech City</h2>
+                <p id="visitMessage">Welcome to Tech City! Explore our gaming and tech attractions.</p>
+            </section>
+
+            <section class="demographics">
+                <h3>About Tech City</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h4>Population</h4>
+                        <p>250,000+</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Gaming Cafés</h4>
+                        <p>45+</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Annual Events</h4>
+                        <p>30+</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Tech Companies</h4>
+                        <p>120+</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="attractions-grid" id="attractionsContainer">
+                <!-- Attractions will be loaded dynamically -->
+            </section>
         </div>
     </main>
 
@@ -86,9 +96,9 @@
         <div class="footer-content">
             <div class="contact-info">
                 <h3>ZaleWeb Chamber of Commerce</h3>
-                <p>BIU Gaming Street, Tech City</p>
-                <p>Email: info@zaleweb.com</p>
-                <p>Phone: (234) 8082-7890</p>
+                <p>9 idubor street, Tech City</p>
+                <p>Email: info@zaleweb@gmail.com</p>
+                <p>Phone: (123) 456-7890</p>
             </div>
             <div class="dev-info">
                 <p>&copy; <span id="currentYear"></span> ZaleWeb Chamber</p>

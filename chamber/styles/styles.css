@@ -720,6 +720,209 @@ body.light-theme .forecast-day {
     margin-right: auto;
 }
 
+
+/* Discover Page Specific Styles */
+.discover-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.welcome-message h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.demographics {
+    margin-bottom: 2rem;
+}
+
+.demographics h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.stat-card h4 {
+    color: var(--text-muted-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--fortnite-blue);
+}
+
+body.light-theme .stat-card p {
+    color: var(--byu-blue);
+}
+
+/* Attractions Grid Layout */
+.attractions-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Small screens (320px - 640px) */
+.attractions-grid {
+    grid-template-areas: 
+        "attraction1"
+        "attraction2"
+        "attraction3"
+        "attraction4"
+        "attraction5"
+        "attraction6"
+        "attraction7"
+        "attraction8";
+    grid-template-columns: 1fr;
+}
+
+.attraction-card:nth-child(1) { grid-area: attraction1; }
+.attraction-card:nth-child(2) { grid-area: attraction2; }
+.attraction-card:nth-child(3) { grid-area: attraction3; }
+.attraction-card:nth-child(4) { grid-area: attraction4; }
+.attraction-card:nth-child(5) { grid-area: attraction5; }
+.attraction-card:nth-child(6) { grid-area: attraction6; }
+.attraction-card:nth-child(7) { grid-area: attraction7; }
+.attraction-card:nth-child(8) { grid-area: attraction8; }
+
+/* Medium screens (641px - 1024px) */
+@media (min-width: 641px) {
+    .attractions-grid {
+        grid-template-areas: 
+            "attraction1 attraction2"
+            "attraction3 attraction4"
+            "attraction5 attraction6"
+            "attraction7 attraction8";
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Large screens (1025px+) */
+@media (min-width: 1025px) {
+    .attractions-grid {
+        grid-template-areas: 
+            "attraction1 attraction2 attraction3"
+            "attraction4 attraction5 attraction6"
+            "attraction7 attraction8 .";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Attraction Card Styles */
+.attraction-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attraction-card h2 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.attraction-card figure {
+    margin: 0 0 1rem 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effects for non-mobile views */
+@media (min-width: 641px) {
+    .attraction-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(123, 97, 255, 0.3);
+    }
+    
+    .attraction-card:hover img {
+        transform: scale(1.05);
+        filter: brightness(1.1) saturate(1.2);
+    }
+}
+
+body.light-theme .attraction-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 46, 93, 0.3);
+}
+
+.attraction-card address {
+    font-style: normal;
+    color: var(--text-muted-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.attraction-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.learn-more-btn {
+    background: var(--fortnite-purple);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.learn-more-btn:hover {
+    background: var(--fortnite-blue);
+}
+
+body.light-theme .learn-more-btn {
+    background: var(--byu-blue);
+}
+
+body.light-theme .learn-more-btn:hover {
+    background: #004280;
+}
+
+
+
+
 /* Responsive Styles */
 @media (min-width: 640px) {
     .events-container {
